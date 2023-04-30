@@ -1,6 +1,6 @@
 # Text-To-Speach-Javascript
  This project is a JavaScript-based text-to-speech web application. Users can input text and adjust the playback speed. The app uses the browser's built-in speech synthesis API to generate speech.
-# Text-To-Speach-Javascript
+# About
 
 A creative project to give voice to your words.
 
