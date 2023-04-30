@@ -24,4 +24,7 @@ A creative project to give voice to your words.
 
 [Click here for Preview](https://decent-m.github.io/Text-To-Speach-Javascript/)
 
+## Auther
+[De Cent Malik](www.facebook.com/decentmalik.m)
+
 
