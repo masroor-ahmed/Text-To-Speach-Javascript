@@ -1,0 +1,111 @@
+html {
+    background-color: #F2F2F2;
+}
+
+body {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#text {
+    border: none;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #555555;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+#text::placeholder {
+    color: #BBBBBB;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+#text:focus {
+    outline: none;
+    box-shadow: 0 0 8px #B7B7B7;
+}
+
+.btns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+label {
+    font-size: 1.2rem;
+    color: #555555;
+}
+
+#speed {
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+}
+
+#play-button,
+#pause-button,
+#stop-button {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#play-button {
+    background-color: #55A0D1;
+    color: #FFFFFF;
+}
+
+#pause-button {
+    background-color: #FCA311;
+    color: #FFFFFF;
+}
+
+#stop-button {
+    background-color: #DB3A34;
+    color: #FFFFFF;
+}
+
+#play-button:hover,
+#pause-button:hover,
+#stop-button:hover {
+    background-color: #CCCCCC;
+}
+
+#download-container {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: end;
+}
+
+a {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #55A0D1;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out;
+}
+
+a:hover {
+    background-color: #3072A8;
+}
