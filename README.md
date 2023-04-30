@@ -14,9 +14,10 @@ A creative project to give voice to your words.
 * Dynamic.
 * Easy to code and also easy logic.
 
-## Technologies used:
+## Languages used:
 
 * Html (for structuring).
+* CSS (for styling).
 * Javascript (to give voice).
 
 ## Project Preview:
