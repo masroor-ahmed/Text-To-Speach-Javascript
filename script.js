@@ -20,6 +20,7 @@ const utterance = new SpeechSynthesisUtterance()
 utterance.addEventListener('end', () => {
   textInput.disabled = false
   createDownloadLink(audioUrl)
+  utterance.text = utterance.text + "Masroor's script" // add the watermark
 })
 utterance.addEventListener('boundary', e => {
   currentCharacter = e.charIndex
@@ -34,7 +35,14 @@ function playText(text) {
   utterance.rate = speedInput.value || 1
   textInput.disabled = true
   speechSynthesis.speak(utterance)
+
+  // Create a blob of the audio data
+  const audioBlob = new Blob([new Uint8Array(utterance.audioBuffer)], { type: 'audio/wav' })
+
+  // Create a URL for the blob
+  audioUrl = URL.createObjectURL(audioBlob)
 }
+
 
 function pauseText() {
   if (speechSynthesis.speaking) speechSynthesis.pause()
@@ -56,21 +64,4 @@ function createDownloadLink(audioUrl) {
   downloadLink.download = 'audio.wav'
   downloadLink.innerText = 'Download audio'
   document.body.appendChild(downloadLink)
-}
-
-function playText(text) {
-  if (speechSynthesis.paused && speechSynthesis.speaking) {
-    return speechSynthesis.resume()
-  }
-  if (speechSynthesis.speaking) return
-  utterance.text = text
-  utterance.rate = speedInput.value || 1
-  textInput.disabled = true
-  speechSynthesis.speak(utterance)
-
-  // Create a blob of the audio data
-  const audioBlob = new Blob([new Uint8Array(utterance.audioBuffer)], { type: 'audio/wav' })
-
-  // Create a URL for the blob
-  audioUrl = URL.createObjectURL(audioBlob)
 }
